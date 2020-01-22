@@ -1,0 +1,24 @@
+﻿@model IEnumerable<EbookList.Models.Book>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br />
+<h3>Ebook List</h3>
+
+<p>
+    <a asp-action="Create" class="btn btn-sm btn-outline-primary">New Book</a>
+</p>
+<hr/>
+
+@if (Model.Count() > 0)
+{
+    //Display Ebooks
+}
+else
+{
+    <div>
+       <h5>No Books Exist..Please Create New Ebook</h5>
+    </div>
+}
+
