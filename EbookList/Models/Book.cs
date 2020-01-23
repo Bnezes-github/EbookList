@@ -13,6 +13,12 @@ namespace EbookList.Models
         [Required]
         public string Name { get; set; }
         public string Author { get; set; }
-        public string Price { get; set; }
+        
+        [DataType(DataType.Currency)]
+        [Range(0.01,100.00, ErrorMessage ="Price must be between £0.01 and £100.00")]
+        public double Price { get; set; }
     }
+
+
+
 }

@@ -1,24 +1,24 @@
 ﻿@model EbookList.Models.Book
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Delete";
 }
-<br/>
+<br />
 
-<h3>Create</h3>
+<h3>Delete Ebook</h3>
 <hr />
 
-<form asp-action="Create">
+<form asp-action="Delete">
     <div class="container">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input asp-for="Id" hidden/>
         <div class="form-group">
             <div class="row">
                 <div class="col-sm-1">
                     <label asp-for="Name"></label>
                 </div>
                 <div class="col-sm-4">
-                    <input asp-for="Name" class="form-control" />
+                    <input asp-for="Name" disabled class="form-control" />
                 </div>
-                <span asp-validation-for="Name" class="text-danger"></span>
+                
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
                     <label asp-for="Author"></label>
                 </div>
                 <div class="col-sm-4">
-                    <input asp-for="Author" class="form-control" />
+                    <input asp-for="Author" disabled class="form-control" />
                 </div>
             </div>
         </div>
@@ -41,15 +41,15 @@
                     <label asp-for="Price"></label>
                 </div>
                 <div class="col-sm-4">
-                    <input asp-for="Price" class="form-control" />
+                    <input asp-for="Price" disabled class="form-control" />
                 </div>
-                <span asp-validation-for="Price" class="text-danger"></span>
+               
             </div>
-            
+
         </div>
-        <br/>
+        <br />
         <div class="form-group">
-            <input type="submit" value="Create" class="btn btn-sm btn-outline-primary"/>
+            <input type="submit" value="Delete" class="btn btn-sm btn-outline-danger" />
             <a asp-action="Index" class="btn btn-sm btn-outline-success">Back to List</a>
         </div>
     </div>
